@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float walkSpeed; //Velocidad de movimiento
     public float jumpForce; //Fuerza de salto
     public LayerMask raycastMask; //Esta LayerMask toma en cuenta a todas las layers menos la del player.
+    public Transform groundChecker;
     #endregion
 
     #region PRIVATE VARIABLES
@@ -49,7 +50,8 @@ public class Player : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, distanceToGround + 0.1f, raycastMask); //Lanzar rayo para detectar el piso
+        return Physics2D.BoxCast(groundChecker.position, new Vector2(distanceToGround, 0.1f), 0f,Vector2.down, 0.1f, raycastMask); //Lanzar rayo para detectar el piso
+        //return Physics2D.Raycast(transform.position, Vector2.down, distanceToGround + 0.1f, raycastMask); //Lanzar rayo para detectar el piso
     }
 
 
