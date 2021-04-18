@@ -25,20 +25,37 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
+        /*if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            GameOver();
+        }*/
     }
 
     public void GameOver()
     {
         isTheGameOver = true;
-        gameOverMenu.SetActive(true);
+        gameOverMenu.SetActive(true); //Mostrar el popup de GameOver
+        Time.timeScale = 0.0f;
+    }
+
+    public void RetryLevel()
+    {
+        Time.timeScale = 1.0f;
+        isTheGameOver = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Recargar la escena
+    }
+
+    public void ExitToMenu()
+    {
+        Time.timeScale = 1.0f;
+        isTheGameOver = false;
+        SceneManager.LoadScene("Menu"); //Recargar la escena
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

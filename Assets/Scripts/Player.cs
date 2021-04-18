@@ -93,8 +93,6 @@ public class Player : MonoBehaviour
         anim.SetFloat("VelX", Mathf.Abs(horizontalMove)); //Mandar al animador la velocidad horizontal (X) actual
 
         anim.SetFloat("VelY", rb.velocity.y); //Le hago saber a la animación cuál es la velocidad en Y del personaje
-        /*if (rb.velocity.y > -0.1f) //Si la velocidad en Y es mayor a -0.2f termino la animación de caída
-            anim.SetBool("PisandoSuelo", true);*/
 
         //Hacer flip a la animación dependiendo de la dirección a la que camine en el eje X
         if (horizontalMove > 0.1f) //Cuando va a la derecha
