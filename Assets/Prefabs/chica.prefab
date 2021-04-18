@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6149550495139045846}
   - component: {fileID: 7376311307014417186}
   - component: {fileID: -7864018939945962709}
-  - component: {fileID: 7453356153179884838}
+  - component: {fileID: -1864398839753800612}
   m_Layer: 0
   m_Name: chica
   m_TagString: Untagged
@@ -103,8 +103,8 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!61 &7453356153179884838
-BoxCollider2D:
+--- !u!70 &-1864398839753800612
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,15 +117,5 @@ BoxCollider2D:
   m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.99999994, y: 1}
+  m_Direction: 1
