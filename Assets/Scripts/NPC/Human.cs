@@ -73,7 +73,6 @@ public class Human : MonoBehaviour
 
     private void ManageAnimation()
     {
-        print(isMoving);
         if (isMoving)
         {
             if(transform.position.x < pos[index].transform.position.x) //Va caminando a la derecha

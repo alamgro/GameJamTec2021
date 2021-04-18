@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Ground
   - Movable
-  - Human
-  - Girl
+  - Penacho
+  - Humano
   layers:
   - Default
   - TransparentFX

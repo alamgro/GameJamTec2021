@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 2424907289998397888}
   - component: {fileID: 2424907289998397903}
   - component: {fileID: 2424907289998397889}
+  - component: {fileID: 2806033430637629499}
   - component: {fileID: 1988385365}
   - component: {fileID: 2424907289998397902}
   - component: {fileID: 2424907289998397901}
@@ -210,6 +211,20 @@ MonoBehaviour:
     m_Bits: 55
   groundChecker: {fileID: 984704297}
   wrongSoulsLimit: 3
+--- !u!114 &2806033430637629499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424907289998397900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbf2af68218abc438f8dd432adcd2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  penachoSoulsGoal: 3
+  wrongSoulsLimit: 3
 --- !u!114 &1988385365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +250,7 @@ MonoBehaviour:
   - {x: -0.23648858, y: 0.70402205, z: 0}
   m_ShapePathHash: 1775368073
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1356
+  m_InstanceId: 46958
 --- !u!50 &2424907289998397902
 Rigidbody2D:
   serializedVersion: 4

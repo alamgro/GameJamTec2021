@@ -16,14 +16,12 @@ public class Player : MonoBehaviour
     public LayerMask raycastMask; //Esta LayerMask toma en cuenta a todas las layers menos la del player.
     public Transform groundChecker;
     [Header("Gameplay parameters")]
-    public int wrongSoulsLimit;
     #endregion
 
     #region PRIVATE VARIABLES
     private float currentSpeed;
     private float horizontalMove;
     private float distanceToGround; //Guarda el tamaño de nuestro collider para calcular la distancia del player al piso
-    private int wrongSoulsCounter; //Lleva la cuenta de cuántas almas inocentes se ha llevado el player, si pasa el límite pierde
     private Rigidbody2D rb;
     private Vector2 velRb;
     private SpriteRenderer spritePlayer;
@@ -40,7 +38,6 @@ public class Player : MonoBehaviour
 
         #region VARIABLES INIT
         currentSpeed = walkSpeed;
-        wrongSoulsCounter = 0; 
         distanceToGround = GetComponent<Collider2D>().bounds.extents.y;
         #endregion
     }
@@ -54,10 +51,7 @@ public class Player : MonoBehaviour
         Movement();
         ManageSprite();
 
-        if (PassedWrongSoulsLimit())
-        {
-            //GameManager.Manager.GameOver();
-        }
+        
 
         rb.velocity = velRb; //Asignar la velocidad final al rigidbody
     }
@@ -101,9 +95,5 @@ public class Player : MonoBehaviour
             spritePlayer.flipX = true;
     }
 
-    private bool PassedWrongSoulsLimit()
-    {
-        return wrongSoulsCounter >= wrongSoulsLimit;
-    }
 }
 
