@@ -12,6 +12,9 @@ public class Human : MonoBehaviour
     private float timeOut;
     public  float velToMoving;
     private bool isMoving;
+    private SpriteRenderer spriteRenderer;
+    private Animator anim;
+
 
     void Start()
     {
@@ -22,6 +25,8 @@ public class Human : MonoBehaviour
         timeOut = Random.Range(1.0f, 6.1f);
         index = Random.Range(0, pos.Length);
         temp = index;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,6 +36,10 @@ public class Human : MonoBehaviour
        // if (Vector3.Distance(transform.position, pos[index].transform.position) == 0.0f)
        if(transform.position == pos[index].transform.position)
             isMoving = false;
+        else
+        {
+            isMoving = true;
+        }
 
         if (timeOut <= time)
         {
@@ -41,6 +50,7 @@ public class Human : MonoBehaviour
 
             }
         }
+        ManageAnimation();
     }
 
     private void Move()//mueve el personaje a la nueva posciosion
@@ -50,9 +60,8 @@ public class Human : MonoBehaviour
         
     private void ResetParameters()//genera un nuevo tiempo y poscision
     {
-        
         time = 0; //reset time
-        isMoving = true;
+        //isMoving = true;
         timeOut = Random.Range(1.1f, 6.1f);
         do
         {
@@ -60,5 +69,26 @@ public class Human : MonoBehaviour
             
         } while (temp == index);
         temp = index; //termine con el valor anterior
+    }
+
+    private void ManageAnimation()
+    {
+        print(isMoving);
+        if (isMoving)
+        {
+            if(transform.position.x < pos[index].transform.position.x) //Va caminando a la derecha
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if(transform.position.x > pos[index].transform.position.x)
+            {
+                spriteRenderer.flipX = false;
+            }
+            anim.SetBool("Idle", false);
+        }
+        else
+        {
+            anim.SetBool("Idle", true);
+        }
     }
 }
