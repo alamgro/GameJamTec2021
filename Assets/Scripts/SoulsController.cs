@@ -51,11 +51,8 @@ public class SoulsController : MonoBehaviour
         if (collision.gameObject.CompareTag("Penacho"))
         {
             Destroy(collision.gameObject);
-            if (MetWinCondition())
-            {
                 penachoSoulsUI[penachoSoulsCounter].SetActive(true);
                 penachoSoulsCounter++;
-            }
         }
         if (collision.gameObject.CompareTag("Humano"))
         {
