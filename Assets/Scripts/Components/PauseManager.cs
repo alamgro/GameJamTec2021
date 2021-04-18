@@ -10,7 +10,8 @@ public class PauseManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        //Solo puede pausar si el juego no está en estado GameOver
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameManager.Manager.isTheGameOver)
         {
             if (isPaused)
             {
