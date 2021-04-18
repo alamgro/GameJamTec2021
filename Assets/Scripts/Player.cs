@@ -47,9 +47,12 @@ public class Player : MonoBehaviour
         velRb = rb.velocity; //Guardar temporalmente el velocity del RigidBody
         currentSpeed = walkSpeed; //Dar una velocidad por defecto al jugador
 
-        Jump();
-        Movement();
-        ManageSprite();
+        if (!PauseManager.isPaused)
+        {
+            Jump();
+            Movement();
+            ManageSprite();
+        }
 
         
 

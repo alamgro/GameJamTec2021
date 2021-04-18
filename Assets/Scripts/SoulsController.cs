@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class SoulsController : MonoBehaviour
 {
@@ -9,12 +11,15 @@ public class SoulsController : MonoBehaviour
     public int wrongSoulsLimit;
     public GameObject[] penachoSoulsUI;
     public GameObject[] wrongSoulsUI;
+    public GameObject dogoUI;
+    public Sprite[] dogoSprites;
 
     private int wrongSoulsCounter; //Lleva la cuenta de cuántas almas inocentes se ha llevado el player, si pasa el límite pierde
     private int penachoSoulsCounter; //Lleva la cuenta de cuántas almas coj penacho se ha llevado el player, al llegar al objetivo, gana
 
     void Start()
     {
+        
         wrongSoulsCounter = 0;
         penachoSoulsCounter = 0;
     }
@@ -45,12 +50,18 @@ public class SoulsController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Penacho"))
         {
-            penachoSoulsUI[penachoSoulsCounter].SetActive(true);
-            penachoSoulsCounter++;
+            Destroy(collision.gameObject);
+            if (MetWinCondition())
+            {
+                penachoSoulsUI[penachoSoulsCounter].SetActive(true);
+                penachoSoulsCounter++;
+            }
         }
         if (collision.gameObject.CompareTag("Humano"))
         {
+            Destroy(collision.gameObject);
             wrongSoulsUI[wrongSoulsCounter].SetActive(true);
+            dogoUI.GetComponent<Image>().sprite = dogoSprites[wrongSoulsCounter]; //Cambiar el sprite Del HUD
             wrongSoulsCounter++;
         }
     }
