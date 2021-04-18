@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Movable
+  - Human
+  - Girl
   layers:
   - Default
   - TransparentFX

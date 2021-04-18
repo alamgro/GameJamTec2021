@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: f2c52481b2768074892f5ff11ee78674
+  - enabled: 1
+    path: Assets/Scenes/Hospital.unity
+    guid: c9017e092baabda44857029a6c79cc71
   m_configObjects: {}
