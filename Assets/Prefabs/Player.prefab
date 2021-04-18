@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: dee9eeca6d8b1cd4990732a682f30543, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -210,7 +210,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   groundChecker: {fileID: 984704297}
-  wrongSoulsLimit: 3
 --- !u!114 &2806033430637629499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +224,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   penachoSoulsGoal: 3
   wrongSoulsLimit: 3
+  penachoSoulsUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  wrongSoulsUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dogoUI: {fileID: 0}
+  dogoSprites:
+  - {fileID: 21300000, guid: 97db246a442e9e94996d0513fca31b32, type: 3}
+  - {fileID: 21300000, guid: ed3b4c9acf929c04797962824c6daddc, type: 3}
+  - {fileID: 21300000, guid: ed3b4c9acf929c04797962824c6daddc, type: 3}
 --- !u!114 &1988385365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +262,7 @@ MonoBehaviour:
   - {x: -0.23648858, y: 0.70402205, z: 0}
   m_ShapePathHash: 1775368073
   m_Mesh: {fileID: 0}
-  m_InstanceId: 46958
+  m_InstanceId: -2032
 --- !u!50 &2424907289998397902
 Rigidbody2D:
   serializedVersion: 4

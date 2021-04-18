@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b749fa9decbe89d4a871c75fd265f686, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2d18408c318af4eb618436dea010ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 3
-  distancia: 10
+  force: 10
+  distancia: 17
 --- !u!70 &24833863
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,8 +134,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.18}
-  m_Size: {x: 1.2, y: 4}
+  m_Offset: {x: -0.14, y: 1.81}
+  m_Size: {x: 0.9, y: 3.45}
   m_Direction: 0
 --- !u!95 &7633327841423950235
 Animator:
